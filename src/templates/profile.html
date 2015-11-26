@@ -1,0 +1,34 @@
+<ion-view view-title="Profile">
+  <ion-content>
+    <div id="profile text-center">
+      <div class="row">
+        <div id = "header">
+          <h4 id="name">{{user.username}}</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="content">
+            <h4 class="stats">Points: <span class="unique">{{user.points}}</span></h4>
+            <h4 class="stats">Visited: <span class="unique">{{user.visited.length}}</span></h4>
+            <h4 class="stats"><span>Favorites: </span> <span ng-repeat='place in user.favorites' ><a href='{{place.wikiLink}}'> {{place.name}}</a> |</span><br> </h4>
+          </div>
+        </div>
+    </div>
+  </div>
+    <h4 align=center>Locations visited</h4>
+    <ion-list>
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="searchInput" type="search" placeholder="Search">
+      </label>
+      <ion-item ng-repeat='landmark in user.visited | filter:searchInput track by $index'>
+        <img class="checked" src="../assets/checked.png" title="Checked" width="26">
+        <span class="name">{{landmark.name}}</span>
+        <img class='leftArrow' src="../assets/left.png"/>
+        <ion-option-button class="button-california" ng-click='showLandmark(landmark)'>View</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

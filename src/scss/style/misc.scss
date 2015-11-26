@@ -1,0 +1,55 @@
+.item{
+  &.item-california {
+    @include item-active-style($tertiary, $green);
+  }
+}
+.bar {
+  &.bar-stable {
+    @include bar-style($primary, $bar-stable-border, $secondary);
+    &.bar-footer{
+      background-image: linear-gradient(180deg, $primary, $bar-stable-border 50%, transparent 50%);
+    }
+  }
+}
+
+.item .item-content.activated {
+  &.item-california {
+    @include item-style($item-california-bg, $item-california-border, $item-california-text);
+  }
+}
+
+#iconRow{
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.californiaIcon{
+  height: 50px;
+  width: 50px;
+}
+
+#hamburgerMenu{
+  color: $secondary;
+}
+
+.locations * {
+  display: inline-block;
+  p{
+    margin-left: 15px;
+  }
+  img{
+    margin-left: 1vw;
+  }
+}
+
+.landmarkIcon{
+  height: 30px;
+  width: 30px;
+}
+
+#map{
+  width: 100vw;
+  height: 50vh;
+}

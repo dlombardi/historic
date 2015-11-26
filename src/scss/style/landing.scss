@@ -1,0 +1,21 @@
+#landing .backPanel {
+  background-image: url("../assets/calimap.jpg");
+  position: relative;
+  background-size: cover;
+  background-color: $tertiary;
+  height: 100vh;
+}
+
+#landing .header {
+  background-color: $cool;
+  opacity: .95;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+#landing .title,
+#landing .subtitle {
+  color:  $primary;
+}

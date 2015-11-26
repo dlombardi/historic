@@ -1,0 +1,39 @@
+#profile {
+  padding: 10px;
+  background-color: $secondary;
+  text-align: center;
+}
+
+#profileThumbnail {
+  border-radius:100%;
+  border: solid 5px grey;
+  max-width: 100px;
+  margin-bottom: 1em;
+  float: right;
+}
+
+#name {
+  float: right;
+
+}
+
+.content {
+  text-align: left;
+}
+
+.unique {
+  color: $green;
+}
+
+.uniqueImg {
+  border: solid 5px $green;
+}
+
+.name{
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.checked{
+  margin-right: 1em;
+}

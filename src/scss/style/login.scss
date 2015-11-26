@@ -1,0 +1,45 @@
+#loginForm{
+  background-color: $secondary;
+  border: 2px solid grey;
+  .list{
+    background-color: $secondary;
+    button{
+      background-color: $highlight;
+      box-shadow: 0px 5px 5px #888888;
+      color: white;
+    }
+    button::active{
+      background-color: $highlight;
+    }
+    a{
+      color: $cool;
+    }
+    label{
+      background-color: $secondary;
+    }
+  }
+}
+
+#loginForm::after{
+  content: "";
+  background: url("../assets/LA-vintage-map.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#stateChange{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  button{
+    background-color: $cool;
+    border: 0px;
+    color: black;
+    border-radius: 5px;
+  }
+}

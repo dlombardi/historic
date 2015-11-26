@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar class="modalHeader">
+    <h1 class="title">{{displayLandmark.name}}</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLandmark()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="modalBody">
+    <div class="well">
+      <div align=right>
+        <b>Registry Number:</b> {{displayLandmark.registryNumber}}<br>
+      </div>
+      <div align='center'>
+        <b>About this location:</b>
+        <hr/>
+        {{displayLandmark.blurb}}
+      </div>
+      <div align='center'>
+        <button ng-hide="hideVisitButton" class="button button-visited" ng-click="addToVisited(displayLandmark)">Visited</button>
+        <button ng-hide="hideFavoritesButton" class="button button-favorites" ng-click="addToFavorites(displayLandmark)">Add to Favorites</button>
+      </div>
+    </div>
+    <div align="center">
+      <img class="californiaIcon" src="../assets/026905-glossy-black-3d-button-icon-culture-state-california.png" alt="">
+    </div>
+    <div align="center" class="wikiLink">
+      <a href="{{displayLandmark.wikiLink}}">Learn more about this location</a>
+    </div>
+  </ion-content>
+</ion-modal-view>

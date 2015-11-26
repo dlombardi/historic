@@ -1,0 +1,40 @@
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "../lib/ionic/scss/ionic";
+
+// import local variables
+@import "./variables/variables",
+
+// import everything else
+"./style/landing",
+"./style/login",
+"./style/profile",
+"./style/misc",
+"./style/landmark";
+
+
+.button-california{
+  background-color: $green;
+  color: whitesmoke;
+}
+
+.button-california:active{
+  background-color: $green;
+  color: $highlight;
+}
+
+.button-cool{
+  background-color: $highlight;
+  color: white;
+}
+
+.leftArrow{
+  float: right;
+}
+
+
+.visited {
+  background-color: $highlight;
+}

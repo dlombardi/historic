@@ -1,0 +1,41 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">{{state}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div id="loginForm">
+      <div class="list">
+        <label ng-show="!Login" class="item item-input">
+          <span class="input-label">Full Name</span>
+          <input type="text" ng-model="user.fullName">
+        </label>
+        <label ng-show="!Login" class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="user.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="user.password">
+        </label>
+        <label class="item">
+          <button ng-if="Login" ng-click="doLogin(user)" class="button button-block button-positive">Log in</button>
+          <button ng-if="!Login" ng-click="register(user)" class="button button-block">Register</button>
+        </label>
+      </div>
+      <div id="stateChange" class="row">
+        <p>{{stateMessage}}</p>
+        <button href="" class="button" ng-click="registerState()">{{stateSwitch}}</button>
+      </div>
+      <div id="iconRow" class="row">
+        <img class="californiaIcon" src="../assets/026905-glossy-black-3d-button-icon-culture-state-california.png" alt="">
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
